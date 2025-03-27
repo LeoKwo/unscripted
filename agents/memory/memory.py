@@ -116,18 +116,18 @@ def get_memory_retriever(name_of_memory: str):
     #     vectorstore = None
 
     # If not found or failed, create a new one
-    if vectorstore is None:
-        embedding_size = 1536
-        index = faiss.IndexFlatL2(embedding_size)
-        # docstore = InMemoryDocstore({})
-        docstore = MemoryDocstore({}, path=f"{store_path}/docstore.pkl")
-        vectorstore = FAISS(
-            embedding_function=embeddings_model.embed_query,
-            index=index,
-            docstore=docstore,
-            index_to_docstore_id={},
-            relevance_score_fn=relevance_score_fn,
-        )
+    # if vectorstore is None:
+    embedding_size = 1536
+    index = faiss.IndexFlatL2(embedding_size)
+    # docstore = InMemoryDocstore({})
+    docstore = MemoryDocstore({}, path=f"{store_path}/docstore.pkl")
+    vectorstore = FAISS(
+        embedding_function=embeddings_model.embed_query,
+        index=index,
+        docstore=docstore,
+        index_to_docstore_id={},
+        relevance_score_fn=relevance_score_fn,
+    )
         # os.makedirs(store_path, exist_ok=True)
         # vectorstore.save_local(store_path)
         # save_docstore(docstore, docstore_path)
