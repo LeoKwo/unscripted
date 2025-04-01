@@ -30,6 +30,10 @@ langchain-experimental==0.3.4
 langchain-ollama==0.3.0
 langchain-openai==0.3.10
 langchain-text-splitters==0.3.7
+langgraph==0.3.21
+langgraph-checkpoint==2.0.23
+langgraph-prebuilt==0.1.7
+langgraph-sdk==0.1.60
 langsmith==0.3.18
 marshmallow==3.26.1
 multidict==6.2.0
@@ -38,6 +42,7 @@ numpy==2.2.4
 ollama==0.4.7
 openai==1.68.2
 orjson==3.10.16
+ormsgpack==1.9.1
 packaging==24.2
 propcache==0.3.1
 pydantic==2.10.6
@@ -60,5 +65,6 @@ transformers==4.50.1
 typing-inspect==0.9.0
 typing_extensions==4.13.0
 urllib3==2.3.0
+xxhash==3.5.0
 yarl==1.18.3
 zstandard==0.23.0
